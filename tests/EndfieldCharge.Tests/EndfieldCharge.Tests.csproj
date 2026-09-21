@@ -29,6 +29,7 @@
   <ItemGroup>
     <!-- 被测源码（链接，避免复制） -->
     <Compile Include="../../Platform/HudDisplayCoordinator.cs" Link="Subject/HudDisplayCoordinator.cs" />
+    <Compile Include="../../Platform/NotchBirthGeometry.cs" Link="Subject/NotchBirthGeometry.cs" />
     <!-- Logger 是被测类的默认日志出口；测试传 log:null 时走这里。
          链接真实文件而非打桩，保证"默认行为"与生产一致。 -->
     <Compile Include="../../Services/Logger.cs" Link="Subject/Logger.cs" />
