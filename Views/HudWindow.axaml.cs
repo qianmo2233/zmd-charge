@@ -54,6 +54,8 @@ public partial class HudWindow : Window
             StartFpsCounter();
         }
 
+        Opened += (_, _) => App.Platform?.OnHudWindowShown(this);
+
         ResetToInitial();
     }
 
@@ -435,6 +437,7 @@ public partial class HudWindow : Window
             Show();
 
         PositionTopCenter();
+        App.Platform?.OnHudWindowShown(this);
         Dispatcher.UIThread.Post(() =>
         {
             PositionTopCenter();
